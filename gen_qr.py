@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 def generate_qr_code():
     url = url_entry.get()
     if not url:
-        messagebox.showwarning("Input Error", "Please enter a URL.")
+        messagebox.showwarning("Input Error", "Please enter a URL or Text.")
         return
 
     # Generate QR code
@@ -33,7 +33,7 @@ def generate_qr_code():
 def save_qr_code():
     url = url_entry.get()
     if not url:
-        messagebox.showwarning("Input Error", "Please enter a URL.")
+        messagebox.showwarning("Input Error", "Please enter a URL or Text.")
         return
 
     filename = "qrcode.png"
@@ -46,7 +46,7 @@ root = tk.Tk()
 root.title("QR Code Generator")
 
 # Create and place the URL entry
-url_label = tk.Label(root, text="Enter URL:")
+url_label = tk.Label(root, text="Enter URL or Text:")
 url_label.pack(pady=10)
 
 url_entry = tk.Entry(root, width=40)
